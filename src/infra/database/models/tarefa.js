@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../service.js";
 
-const Tarefa = sequelize.define("Tarefa", {
+const Tarefa = sequelize.define("tarefas", {
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
