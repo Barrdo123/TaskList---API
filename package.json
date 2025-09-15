@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
-    "test-db": "node scripts/test-db.js",
-    "create-db": "node scripts/create-database.js",
-    "dev": "NODE_ENV=development node src/app.js"
+    "dev": "NODE_ENV=development node src/app.js",
+    "db:migrate": "sequelize-cli db:migrate"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +17,8 @@
     "express": "^5.1.0",
     "mysql2": "^3.14.3",
     "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.3"
   }
 }
