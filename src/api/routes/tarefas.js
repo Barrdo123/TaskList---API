@@ -1,5 +1,5 @@
 import express from "express";
-import tarefaController from "../api/controllers/tarefaController.js";
+import tarefaController from "../controllers/tarefaController.js";
 const router = express.Router();
 
 router.get("/", (req, res) => tarefaController.getAllTarefas(req, res));

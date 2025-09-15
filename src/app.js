@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import sequelize from "./infra/database/service.js";
-import tarefasRouter from "./routes/tarefas.js";
+import tarefasRouter from "./api/routes/tarefas.js";
 
 const app = express();
 const port = 3000;
