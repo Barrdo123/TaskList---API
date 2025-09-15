@@ -1,5 +1,5 @@
-const express = require("express");
-const tarefaController = require("../controllers/tarefaController");
+import express from "express";
+import tarefaController from "../api/controllers/tarefaController.js";
 const router = express.Router();
 
 router.get("/", (req, res) => tarefaController.getAllTarefas(req, res));
@@ -8,4 +8,4 @@ router.get("/:id", (req, res) => tarefaController.getTarefaById(req, res));
 router.put("/:id", (req, res) => tarefaController.updateTarefa(req, res));
 router.delete("/:id", (req, res) => tarefaController.deleteTarefas(req, res));
 
-module.exports = router;
+export default router;

@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../service");
+import { DataTypes } from "sequelize";
+import sequelize from "../service.js";
 
 const Tarefa = sequelize.define("Tarefa", {
   id: {
@@ -22,4 +22,4 @@ const Tarefa = sequelize.define("Tarefa", {
   },
 });
 
-module.exports = Tarefa;
+export default Tarefa;

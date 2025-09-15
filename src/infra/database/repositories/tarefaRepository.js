@@ -1,4 +1,4 @@
-const Tarefa = require("../models/tarefa");
+import Tarefa from "../models/tarefa.js";
 
 class TarefaRepository {
   async getAllTarefas() {
@@ -57,4 +57,4 @@ class TarefaRepository {
   }
 }
 
-module.exports = new TarefaRepository();
+export default new TarefaRepository();

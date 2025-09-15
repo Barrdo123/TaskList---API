@@ -1,4 +1,4 @@
-const TarefaRepository = require("../../infra/database/repositories/tarefaRepository");
+import TarefaRepository from "../../infra/database/repositories/tarefaRepository.js";
 
 class TarefaController {
   async getAllTarefas(_req, res) {
@@ -79,4 +79,4 @@ class TarefaController {
   }
 }
 
-module.exports = new TarefaController();
+export default new TarefaController();

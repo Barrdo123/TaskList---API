@@ -1,5 +1,7 @@
-const path = require("path");
-require("dotenv").config();
+import path from "path";
+import { config } from "dotenv";
+
+config();
 
 function getDatabaseUrl() {
   if (process.env.DATABASE_URL) return process.env.DATABASE_URL;
@@ -13,7 +15,7 @@ function getDatabaseUrl() {
   return `mysql://${dbUser}:${dbPass}@${dbHost}:${dbPort}/${dbName}`;
 }
 
-module.exports = {
+export default {
   config: path.resolve("src", "infra", "database", "service.js"),
   "models-path": path.resolve("src", "infra", "database", "models"),
   "migrations-path": path.resolve("src", "infra", "database", "migrations"),
