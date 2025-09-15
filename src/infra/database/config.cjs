@@ -15,5 +15,5 @@ function getDatabaseUrl() {
 module.exports = {
   url: getDatabaseUrl(),
   dialect: "mysql",
-  logging: console.log,
+  logging: process.env.NODE_ENV === "development" ? console.log : false,
 };
